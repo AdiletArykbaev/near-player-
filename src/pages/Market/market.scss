@@ -1,6 +1,9 @@
 .market {
   color: #FFFFFF;
-  position: fixed; top: 0; left: 0;
+  position: fixed;
+  padding: 16px;
+  top: 0;
+  left: 0;
   width: 100%;
   z-index: 1;
   &__main {
