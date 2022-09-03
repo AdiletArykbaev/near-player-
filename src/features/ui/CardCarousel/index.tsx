@@ -7,6 +7,8 @@ import "swiper/css/grid";
 import UpcomingCard from "../UpcomingCard";
 import FeaturedCard from "../FeaturedCard";
 import RecentCard from "../RecentCard";
+import Switch from "../../../entities/ui/Switch";
+import Selector from "../../../entities/ui/Selector";
 
 interface CardCarouselProps {
     text: string,
@@ -16,29 +18,57 @@ interface CardCarouselProps {
     type?: number,
 }
 
-const SwiperBtn: FC<CardCarouselProps> = ({text}) => {
+const SwiperBtn: FC<CardCarouselProps> = ({text, type}) => {
 
     const swiper = useSwiper();
     return (
         <div className="cardCarousel__row">
             <h2 className="cardCarousel__title">{text}</h2>
             <div className="cardCarousel__btnBox">
-                <button onClick={() => swiper.slidePrev()}>
-                    <svg width="20" height="21" viewBox="0 0 20 21" fill="none"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M11.0775 15.2558L6.32169 10.5L11.0775 5.74414L12.2559 6.92247L8.67836 10.5L12.2559 14.0775L11.0775 15.2558Z"
-                            fill="#06020D" fillOpacity="0.6"/>
-                    </svg>
-                </button>
-                <button onClick={() => swiper.slideNext()}>
-                    <svg width="20" height="21" viewBox="0 0 20 21" fill="none"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M8.92247 15.2558L13.6783 10.5L8.92247 5.74414L7.74414 6.92247L11.3216 10.5L7.74414 14.0775L8.92247 15.2558Z"
-                            fill="#06020D"/>
-                    </svg>
-                </button>
+                {
+                    type === 1
+                        ? <>
+                            <button onClick={() => swiper.slidePrev()}>
+                                <svg width="20" height="21" viewBox="0 0 20 21" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M11.0775 15.2558L6.32169 10.5L11.0775 5.74414L12.2559 6.92247L8.67836 10.5L12.2559 14.0775L11.0775 15.2558Z"
+                                        fill="#06020D" fillOpacity="0.6"/>
+                                </svg>
+                            </button>
+                            <button onClick={() => swiper.slideNext()}>
+                                <svg width="20" height="21" viewBox="0 0 20 21" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M8.92247 15.2558L13.6783 10.5L8.92247 5.74414L7.74414 6.92247L11.3216 10.5L7.74414 14.0775L8.92247 15.2558Z"
+                                        fill="#06020D"/>
+                                </svg>
+                            </button>
+                        </>
+                        : type === 2
+                        ? <Selector data={[1, 2, 3, 4, 5]}/>
+                        : <>
+                            <Selector data={[1, 2, 3, 4, 5]}/>
+                            <Switch text={"Available"}/>
+                            <button onClick={() => swiper.slidePrev()}>
+                                <svg width="20" height="21" viewBox="0 0 20 21" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M11.0775 15.2558L6.32169 10.5L11.0775 5.74414L12.2559 6.92247L8.67836 10.5L12.2559 14.0775L11.0775 15.2558Z"
+                                        fill="#06020D" fillOpacity="0.6"/>
+                                </svg>
+                            </button>
+                            <button onClick={() => swiper.slideNext()}>
+                                <svg width="20" height="21" viewBox="0 0 20 21" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M8.92247 15.2558L13.6783 10.5L8.92247 5.74414L7.74414 6.92247L11.3216 10.5L7.74414 14.0775L8.92247 15.2558Z"
+                                        fill="#06020D"/>
+                                </svg>
+                            </button>
+                        </>
+                }
+
             </div>
         </div>
     )
@@ -68,7 +98,7 @@ const CardCarousel: FC<CardCarouselProps> = ({
                         }
                     </SwiperSlide>
                 ))}
-                <SwiperBtn text={text}/>
+                <SwiperBtn text={text} type={type}/>
             </Swiper>
         </div>
     );
