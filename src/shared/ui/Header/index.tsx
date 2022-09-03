@@ -4,13 +4,16 @@ import './header.scss'
 import SearchBar from "../../../entities/ui/SearchBar";
 import {NavLink} from "react-router-dom";
 import Button from "../../../entities/ui/Button";
+import Logo from "../../../entities/ui/Logo";
 
 const Header = () => {
     return (
         <header className="header">
             <div className="container">
                 <div className="header__info">
-                    <img className="header__logo" src={logo} alt="AVA Bithold"/>
+                    <div className="header__logo">
+                        <Logo height={24} width={24}/>
+                    </div>
                     <SearchBar/>
                     <div className="header__nav">
                         <NavLink to="/explore">Explore</NavLink>

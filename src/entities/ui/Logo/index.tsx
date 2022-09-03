@@ -5,7 +5,7 @@ export interface Props {
     height: number;
 }
 
-const Index: FC<Props> = ({width, height}) => {
+const Logo: FC<Props> = ({width, height}) => {
     return (
         <svg width={`${width}`} height={`${height}`} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd"
@@ -15,4 +15,4 @@ const Index: FC<Props> = ({width, height}) => {
     );
 };
 
-export default Index;
+export default Logo;
