@@ -4,7 +4,7 @@ import './header.scss'
 import SearchBar from "../../../entities/ui/SearchBar";
 import {NavLink} from "react-router-dom";
 import Button from "../../../entities/ui/Button";
-import Logo from "../../../entities/ui/Logo";
+import Logo from "../../../entities/ui/logo";
 
 const Header = () => {
     return (
