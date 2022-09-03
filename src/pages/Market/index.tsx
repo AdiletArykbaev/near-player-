@@ -11,11 +11,12 @@ const Market = () => {
     const [tab, setTab] = useState("UpperPage");
 
     const [stateTop, setStateTop] = useState(0);
-    const elementRef: any = useRef(null);
+    const elementRef: any = useRef();
 
     useEffect(()=>{
-        setStateTop(elementRef.current.clientHeight)
-    }, []);
+        setStateTop(elementRef.current.clientHeight);
+        console.log(window.scrollY);
+    }, [elementRef]);
 
     return (
         <>
@@ -32,7 +33,7 @@ const Market = () => {
                 </div>
                 <Dashboard/>
             </div>
-            <div style={{top: stateTop}} className="MarketPlace">
+            <div id="test" style={{top: stateTop}} className="MarketPlace">
                 <MarketPlace/>
             </div>
         </>

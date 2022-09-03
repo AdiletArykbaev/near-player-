@@ -6,6 +6,8 @@
   left: 0;
   width: 100%;
   z-index: 1;
+  overflow-y: scroll;
+  max-height: 100vh;
   &__main {
     background: url("./imgs/background.png") center/cover no-repeat;
     border-radius: 9px;

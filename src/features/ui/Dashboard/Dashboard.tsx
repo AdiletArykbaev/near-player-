@@ -19,10 +19,10 @@ const Dashboard = () => {
                             <TwitterIcon/>
                             <DiscordIcon/>
                         </div>
-                        <div className="dashboard__left_tips">
+                        <a href="#test" className="dashboard__left_tips">
                             <MouseIcon/>
                             <ArrowIcon/>
-                        </div>
+                        </a>
                     </div>
                     <div className="dashboard__right">
                         <CardEvent image={img} aviable={true} name="Octopus Network"/>
