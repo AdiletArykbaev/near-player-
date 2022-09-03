@@ -1,11 +1,11 @@
-import React from 'react';
+import React, {FC} from 'react';
 
 export interface Props {
     width: number;
     height: number;
 }
 
-const Logo = (width: Props, height: Props) => {
+const Logo: FC<Props> = ({width, height}) => {
     return (
         <svg width={`${width}`} height={`${height}`} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd"
