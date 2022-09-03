@@ -10,7 +10,11 @@ const MarketPlace = () => {
             <CardCarousel type={2} text={"Featured Collections"}
                           data={Array.from(Array(10).keys())} slidesCount={5}/>
             <CardCarousel type={3} text={"Recent drops"}
-                          data={Array.from(Array(24).keys())} slidesCount={6}/>
+                          data={Array.from(Array(10).keys())} slidesCount={6}/>
+            <CardCarousel type={3} text={"Electronic/Dance"}
+                          data={Array.from(Array(10).keys())} slidesCount={6}/>
+            <CardCarousel type={3} text={"Pop"}
+                          data={Array.from(Array(10).keys())} slidesCount={6}/>
         </>
     );
 };

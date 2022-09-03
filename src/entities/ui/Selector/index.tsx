@@ -10,7 +10,7 @@ const Selector: FC<SelectorProps> = ({data}) => {
         <select className="selector">
             {
                 data && data.map((el: any) => (
-                    <option>{el}H</option>
+                    <option key={el}>{el}H</option>
                 ))
             }
         </select>
