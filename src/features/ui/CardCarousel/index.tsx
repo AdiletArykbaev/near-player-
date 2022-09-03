@@ -46,9 +46,7 @@ const SwiperBtn: FC<CardCarouselProps> = ({text, type}) => {
                             </button>
                         </>
                         : type === 2
-                        ? <>
-                            <Selector data={[1, 2, 3, 4, 5]}/>
-                        </>
+                        ? <Selector data={[1, 2, 3, 4, 5]}/>
                         : <>
                             <Selector data={[1, 2, 3, 4, 5]}/>
                             <Switch text={"Available"}/>
