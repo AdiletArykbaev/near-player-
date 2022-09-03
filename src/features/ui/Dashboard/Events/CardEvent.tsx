@@ -34,8 +34,11 @@ const CardEvent: FC<Props> = ({name, aviable, image}) => {
                                 </span>
                             </h2>
                             <button className="button">Learn More
-                                <svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M6.87493 7.95219L8.54135 7.95219L8.54135 0.0479155L0.637074 0.0479158L0.637074 1.71433L5.69642 1.71433L0.0478183 7.36294L1.22633 8.54145L6.87493 2.89284L6.87493 7.95219Z" fill="#F9F7F7"/>
+                                <svg width="9" height="9" viewBox="0 0 9 9" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M6.87493 7.95219L8.54135 7.95219L8.54135 0.0479155L0.637074 0.0479158L0.637074 1.71433L5.69642 1.71433L0.0478183 7.36294L1.22633 8.54145L6.87493 2.89284L6.87493 7.95219Z"
+                                        fill="#F9F7F7"/>
                                 </svg>
                             </button>
                         </>

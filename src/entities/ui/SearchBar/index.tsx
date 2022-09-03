@@ -1,11 +1,11 @@
-import React, {FC, useEffect, useState} from 'react';
+import React, {FC, useState} from 'react';
 import './search.scss';
 
-interface SearchBar {
+interface SearchBarProps {
     colorSvg: string,
 }
 
-const SearchBar: FC<SearchBar> = ({colorSvg}) => {
+const SearchBar: FC<SearchBarProps> = ({colorSvg}) => {
     const [input, setInput] = useState(false);
 
     return (
