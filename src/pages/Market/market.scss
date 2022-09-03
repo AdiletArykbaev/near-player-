@@ -1,23 +1,28 @@
-.market{
+.market {
   color: #FFFFFF;
-  &__main{
+
+  &__main {
     background: url("./imgs/background.png") center/cover no-repeat;
-    padding: 34px 90px;
+    padding: 106px 90px 34px;
     border-radius: 9px;
   }
-  &__left{
+
+  &__left {
     display: flex;
     flex-direction: column;
-    &_info{
+
+    &_info {
       width: 500px;
       display: flex;
       flex-direction: column;
     }
-    .yellow{
+
+    .yellow {
       color: #E7B672;
       margin-right: 6px;
     }
-    &_version{
+
+    &_version {
       font-style: normal;
       font-weight: 700;
       font-size: 12px;
@@ -27,7 +32,8 @@
       letter-spacing: -0.5px;
       text-transform: uppercase;
     }
-    &_title{
+
+    &_title {
       font-family: 'Baron Neue', sans-serif;
       font-style: normal;
       font-weight: 700;
@@ -38,7 +44,8 @@
       text-transform: uppercase;
       color: #FFFFFF;
     }
-    &_subtitle{
+
+    &_subtitle {
       font-style: normal;
       font-weight: 400;
       font-size: 16px;
@@ -47,18 +54,21 @@
       align-items: center;
       color: rgba(229, 222, 221, 0.6);
     }
-    &_buttons{
+
+    &_buttons {
       margin-top: 40px;
       display: flex;
       column-gap: 20px;
-      button{
+
+      button {
         display: flex;
         align-items: center;
         justify-content: center;
         width: 183px;
         height: 40px;
       }
-      .button1{
+
+      .button1 {
         background: #FFFFFF;
         border: 1px solid #F9F7F7;
         border-radius: 6px;
@@ -67,11 +77,13 @@
         font-size: 16px;
         line-height: 120%;
         color: #06020D;
-        svg{
+
+        svg {
           margin-left: 15px;
         }
       }
-      .button2{
+
+      .button2 {
         background: rgba(255, 255, 255, 0.05);
         border: 1px solid rgba(252, 252, 252, 0.2);
         border-radius: 6px;
