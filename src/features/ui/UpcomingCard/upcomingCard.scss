@@ -5,6 +5,8 @@
   height: 180px;
   justify-content: space-between;
   flex-direction: column;
+  border-radius: 6px;
+  overflow: hidden;
 
   &::after {
     z-index: -1;

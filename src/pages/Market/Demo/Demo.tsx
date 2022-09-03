@@ -1,7 +1,10 @@
-import React from 'react';
+import React, {useState} from 'react';
 import "./Demo.scss"
 
 const Demo = ({setTab}: any) => {
+
+    const [type, setType] = useState("Collector");
+
     return (
         <div className="market__demo">
             <div className="market__demo_left">
@@ -35,14 +38,18 @@ const Demo = ({setTab}: any) => {
                     with tooling that scales with your creative ambitions.
                 </span>
                 <div className="market__demo_choose">
-                    <div className="market__demo_chooseBlock activeChoose">
+                    <div onClick={()=>{
+                        setTab("Collector")
+                    }} className="market__demo_chooseBlock activeChoose">
                         <h2>Collector</h2>
                         <span>
                             Collectors can browse and buy
                             NFTs but not submit anything for sale.
                         </span>
                     </div>
-                    <div className="market__demo_chooseBlock">
+                    <div onClick={()=>{
+                        setTab("Artist")
+                    }} className="market__demo_chooseBlock">
                         <h2>Artist</h2>
                         <span>
                             Artists can browse and buy

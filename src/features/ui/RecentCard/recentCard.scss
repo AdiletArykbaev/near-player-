@@ -1,0 +1,126 @@
+.recentCard {
+  border-radius: 6px;
+  overflow: hidden;
+  transition: 0.3s;
+  position: relative;
+  bottom: 0;
+
+  &:hover {
+    bottom: 10px;
+    border: 1px solid #E7B672;
+    transition: 0.3s;
+
+    .recentCard__staking {
+      opacity: 1;
+      transition: 0.3s;
+    }
+
+    .recentCard__content {
+      border: none;
+      background: rgba(231, 182, 114, 0.2);
+      transition: 0.3s;
+    }
+
+    .recentCard__promo {
+      border-bottom: 1px solid #E7B672;
+      transition: 0.3s;
+    }
+  }
+
+  &__promo {
+    overflow: hidden;
+    position: relative;
+    height: 220px;
+    transition: 0.3s;
+
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      max-width: 130%;
+      max-height: 130%;
+      min-height: 100%;
+      min-width: 100%;
+    }
+  }
+
+  &__staking {
+    transition: 0.3s;
+    font-family: 'Rubik', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    color: #E7B672;
+    padding: 10px;
+    border: 1px solid #E7B672;
+    text-align: center;
+    border-radius: 0 6px;
+    width: 50%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    opacity: 0;
+  }
+
+  &__content {
+    border: 1px solid rgba(6, 2, 13, 0.2);
+    border-top: 0;
+    transition: 0.3s;
+  }
+
+  &__info {
+    padding: 10px;
+  }
+
+  &__title {
+    font-family: 'Rubik', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    color: #06020D;
+    margin: 0 0 3px;
+  }
+
+  &__subtitle {
+    font-family: 'Rubik', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: #06020D;
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+  }
+
+  &__actions {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__score {
+    font-family: 'Rubik', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+    color: #06020D;
+  }
+
+  &__btn {
+    font-family: 'Rubik', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    color: #06020D;
+  }
+}

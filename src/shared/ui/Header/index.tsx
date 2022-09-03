@@ -5,27 +5,20 @@ import {NavLink} from "react-router-dom";
 import Button from "../../../entities/ui/Button";
 import Logo from "../../../entities/ui/logo";
 
+
 interface Header {
-    colorSvg: string,
-    buttonColor1: string,
-    buttonColor2: string,
-    buttonBg1: string,
-    buttonBg2: string,
-    buttonBorder1: string,
-    buttonBorder2: string,
-    buttonText1: string,
-    buttonText2: string,
+    type: boolean
 }
 
-const Header: FC<Header> = ({colorSvg, buttonColor1, buttonColor2, buttonBg1, buttonBg2, buttonBorder1, buttonBorder2, buttonText1, buttonText2}) => {
+const Header: FC<Header> = ({type}) => {
     return (
         <header className="header">
             <div className="header__row">
                 <div className="header__info">
                     <div className="header__logo">
-                        <Logo height={24} width={24}/>
+                        <Logo width={24} height={24}/>
                     </div>
-                    <SearchBar colorSvg={colorSvg}/>
+                    <SearchBar colorSvg={type ? "#FFFFFF" : "#06020D"}/>
                     <div className="header__nav">
                         <NavLink to="/explore">Explore</NavLink>
                         <NavLink to="/collections">Collections</NavLink>
@@ -39,12 +32,24 @@ const Header: FC<Header> = ({colorSvg, buttonColor1, buttonColor2, buttonBg1, bu
                                 fill="#F9F7F7"/>
                         </svg>
                     </button>
-                    <Button text={buttonText1} color={buttonColor1} background={buttonBg1} border={buttonBorder1}/>
-                    <Button text={buttonText2} color={buttonColor2} background={buttonBg2} border={buttonBorder2}/>
+                    {
+                        type
+                            ? <>
+                                <Button text={"Log in"} color={"#F9F7F7"} background={"transparent"}
+                                        border={"1px solid #F9F7F7"}/>
+                                <Button text={"Sign up"} color={"#06020D"} background={"#E7B672"}
+                                        border={"1px solid #E7B672"}/>
+                            </>
+                            : <>
+                                <Button text={"Log in"} color={"#06020D"} background={"transparent"}
+                                        border={"1px solid rgba(6, 2, 13, 0.2)"}/>
+                                <Button text={"Sign up"} color={"#F9F7F7"} background={"#06020D"}
+                                        border={"1px solid #06020D"}/>
+                            </>
+                    }
                 </div>
             </div>
         </header>
     );
 };
-
 export default Header;

@@ -1,14 +1,10 @@
-import React, {FC} from 'react';
+import React from 'react';
 import cardImg from '../../img/upcomingCard.png';
 import './upcomingCard.scss';
 
-interface Props {
-    width: string
-}
-
-const UpcomingCard: FC<Props> = ({width}) => {
+const UpcomingCard = () => {
     return (
-        <div style={{width}} className="card">
+        <div className="card">
             <div className="card__top">
                 <div className="card__img">
                     <img src={cardImg} alt="upcomingCard"/>

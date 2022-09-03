@@ -1,0 +1,78 @@
+.featuredCard {
+  padding: 10px 10px 23px 10px;
+  border: 1px solid rgba(6, 2, 13, 0.2);
+  border-radius: 6px;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__promo {
+    overflow: hidden;
+    width: 70%;
+    border-radius: 5.76923px;
+    position: relative;
+
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      max-height: 130%;
+      max-width: 130%;
+      min-width: 100%;
+      min-height: 100%;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    width: calc(100% - 67% - 20px);
+
+    &_item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 5.76923px;
+      height: 60px;
+      width: 100%;
+
+      img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 130%;
+        max-height: 130%;
+        min-width: 100%;
+        min-height: 100%;
+      }
+    }
+  }
+
+  &__title {
+    font-family: 'Rubik', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 120%;
+    display: flex;
+    align-items: center;
+    color: #06020D;
+    margin: 20px 0 6px;
+  }
+
+  &__subtitle {
+    font-family: 'Rubik', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+    color: #06020D;
+  }
+}
