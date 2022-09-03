@@ -68,7 +68,6 @@ const SwiperBtn: FC<CardCarouselProps> = ({text, type}) => {
                             </button>
                         </>
                 }
-
             </div>
         </div>
     )
