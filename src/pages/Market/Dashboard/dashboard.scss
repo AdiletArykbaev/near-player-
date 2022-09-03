@@ -1,0 +1,37 @@
+.dashboard{
+  padding: 14px 0;
+  &__main{
+    display: flex;
+    align-items: center;
+  }
+  &__left{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-right: 16px;
+    &_networks{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 24px 26px;
+      gap: 10px;
+      width: 76px;
+      height: 98px;
+      background: #06020D;
+      border-radius: 9px;
+    }
+    &_tips{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 26px;
+      gap: 10px;
+      width: 76px;
+      height: 98px;
+      background: #E7B672;
+      border-radius: 9px;
+    }
+  }
+}
