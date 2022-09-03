@@ -5,11 +5,11 @@ import {NavLink} from "react-router-dom";
 import Button from "../../../entities/ui/Button";
 import Logo from "../../../entities/ui/Logo";
 
-interface Header {
+interface HeaderProps {
     type: boolean
 }
 
-const Header: FC<Header> = ({type}) => {
+const Header: FC<HeaderProps> = ({type}) => {
     return (
         <header className="header">
             <div className="header__row">
