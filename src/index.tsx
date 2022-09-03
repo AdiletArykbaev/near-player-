@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import './features/lib/fonts/BaronNeue/stylesheet.css';
 import App from './app';
 import reportWebVitals from './reportWebVitals';
 import {Provider} from 'react-redux'
