@@ -1,6 +1,6 @@
 import React, {FC} from 'react';
 
-export interface Props {
+interface Props {
     width: number;
     height: number;
 }

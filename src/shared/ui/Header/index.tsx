@@ -1,12 +1,23 @@
-import React from 'react';
-import logo from '../../../features/img/logo.png'
+import React, {FC} from 'react';
 import './header.scss'
 import SearchBar from "../../../entities/ui/SearchBar";
 import {NavLink} from "react-router-dom";
 import Button from "../../../entities/ui/Button";
 import Logo from "../../../entities/ui/Logo";
 
-const Header = () => {
+interface Header {
+    colorSvg: string,
+    buttonColor1: string,
+    buttonColor2: string,
+    buttonBg1: string,
+    buttonBg2: string,
+    buttonBorder1: string,
+    buttonBorder2: string,
+    buttonText1: string,
+    buttonText2: string,
+}
+
+const Header: FC<Header> = ({colorSvg, buttonColor1, buttonColor2, buttonBg1, buttonBg2, buttonBorder1, buttonBorder2, buttonText1, buttonText2}) => {
     return (
         <header className="header">
             <div className="container">
@@ -14,7 +25,7 @@ const Header = () => {
                     <div className="header__logo">
                         <Logo height={24} width={24}/>
                     </div>
-                    <SearchBar/>
+                    <SearchBar colorSvg={colorSvg}/>
                     <div className="header__nav">
                         <NavLink to="/explore">Explore</NavLink>
                         <NavLink to="/collections">Collections</NavLink>
@@ -28,8 +39,8 @@ const Header = () => {
                                 fill="#F9F7F7"/>
                         </svg>
                     </button>
-                    <Button text={"Log in"} color={"#F9F7F7"} background={"transparent"} border={"1px solid #F9F7F7"}/>
-                    <Button text={"Sign up"} color={"#06020D"} background={"#E7B672"} border={"1px solid #E7B672"}/>
+                    <Button text={buttonText1} color={buttonColor1} background={buttonBg1} border={buttonBorder1}/>
+                    <Button text={buttonText2} color={buttonColor2} background={buttonBg2} border={buttonBorder2}/>
                 </div>
             </div>
         </header>
