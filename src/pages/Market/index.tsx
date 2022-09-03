@@ -25,6 +25,7 @@ const Market = () => {
                 </div>
                 <Dashboard/>
             </div>
+
             <MarketPlace/>
         </>
     );
