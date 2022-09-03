@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState, useRef} from 'react';
 import "./market.scss";
 import Dashboard from "../../features/ui/Dashboard/Dashboard";
 import Header from "../../shared/ui/Header";
@@ -10,9 +10,16 @@ const Market = () => {
 
     const [tab, setTab] = useState("UpperPage");
 
+    const [stateTop, setStateTop] = useState(0);
+    const elementRef: any = useRef(null);
+
+    useEffect(()=>{
+        setStateTop(elementRef.current.clientHeight)
+    }, []);
+
     return (
         <>
-            <div className="market">
+            <div ref={elementRef} className="market">
                 <div className="market__main">
                     <Header type={true}/>
                     {
@@ -25,8 +32,9 @@ const Market = () => {
                 </div>
                 <Dashboard/>
             </div>
-
-            <MarketPlace/>
+            <div style={{top: stateTop}} className="MarketPlace">
+                <MarketPlace/>
+            </div>
         </>
     );
 };
