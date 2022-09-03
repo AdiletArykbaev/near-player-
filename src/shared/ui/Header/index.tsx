@@ -3,7 +3,7 @@ import './header.scss'
 import SearchBar from "../../../entities/ui/SearchBar";
 import {NavLink} from "react-router-dom";
 import Button from "../../../entities/ui/Button";
-import Logo from "../../../entities/ui/Logo";
+import Logo from "../../../entities/ui/logo";
 
 interface Header {
     colorSvg: string,
@@ -20,7 +20,7 @@ interface Header {
 const Header: FC<Header> = ({colorSvg, buttonColor1, buttonColor2, buttonBg1, buttonBg2, buttonBorder1, buttonBorder2, buttonText1, buttonText2}) => {
     return (
         <header className="header">
-            <div className="container">
+            <div className="header__row">
                 <div className="header__info">
                     <div className="header__logo">
                         <Logo height={24} width={24}/>

@@ -4,7 +4,6 @@ import "./dashboard.scss";
 const Dashboard = () => {
     return (
         <div className="dashboard">
-            <div className="container">
                 <div className="dashboard__main">
                     <div className="dashboard__left">
                         <div className="dashboard__left_networks">
@@ -47,7 +46,6 @@ const Dashboard = () => {
 
                     </div>
                 </div>
-            </div>
         </div>
     );
 };

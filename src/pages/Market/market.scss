@@ -3,11 +3,12 @@
 
   &__main {
     background: url("./imgs/background.png") center/cover no-repeat;
-    padding: 106px 90px 34px;
     border-radius: 9px;
+    padding: 16px 24px;
   }
 
   &__left {
+    padding: 34px 0 34px 92px;
     display: flex;
     flex-direction: column;
 

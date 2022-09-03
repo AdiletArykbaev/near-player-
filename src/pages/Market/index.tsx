@@ -1,14 +1,18 @@
 import React from 'react';
 import "./market.scss";
-import Dashboard from "./Dashboard/Dashboard";
+import Dashboard from "../../features/ui/Dashboard/Dashboard";
+import Header from "../../shared/ui/Header";
 
 const Market = () => {
     return (
         <div className="market">
 
-            <div className="container">
 
                 <div className="market__main">
+
+                    <Header buttonBorder1={"1px solid #F9F7F7"} buttonBorder2={"1px solid #E7B672"} buttonBg2={"#E7B672"}
+                            buttonBg1={"transparent"} buttonText1={"Log in"} buttonText2={"Sign up"} colorSvg={"#FFFFFF"}
+                            buttonColor1={"#F9F7F7"} buttonColor2={"#06020D"}/>
 
                     <div className="market__left">
                         <div className="market__left_info">
@@ -37,7 +41,6 @@ const Market = () => {
                         </div>
                     </div>
 
-                </div> 
 
             </div>
 
