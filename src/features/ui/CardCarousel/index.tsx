@@ -8,6 +8,7 @@ import UpcomingCard from "../UpcomingCard";
 import FeaturedCard from "../FeaturedCard";
 import RecentCard from "../RecentCard";
 import Switch from "../../../entities/ui/Switch";
+import Selector from "../../../entities/ui/Selector";
 
 interface CardCarouselProps {
     text: string,
@@ -46,18 +47,10 @@ const SwiperBtn: FC<CardCarouselProps> = ({text, type}) => {
                         </>
                         : type === 2
                         ? <>
-                            <select>
-                                <option>24H</option>
-                                <option>36H</option>
-                                <option>48H</option>
-                            </select>
+                            <Selector data={[1, 2, 3, 4, 5]}/>
                         </>
                         : <>
-                            <select>
-                                <option>24H</option>
-                                <option>36H</option>
-                                <option>48H</option>
-                            </select>
+                            <Selector data={[1, 2, 3, 4, 5]}/>
                             <Switch text={"Available"}/>
                             <button onClick={() => swiper.slidePrev()}>
                                 <svg width="20" height="21" viewBox="0 0 20 21" fill="none"
