@@ -1,6 +1,6 @@
 import React, {FC} from 'react';
 import "./EventCard.scss";
-import Logo from "../../../../entities/ui/Logo";
+import Logo from "../../../../entities/ui/logo";
 
 interface Props {
     name: string,

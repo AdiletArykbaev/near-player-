@@ -10,19 +10,19 @@ const Market = () => {
     const [tab, setTab] = useState("UpperPage");
 
     return (
-        <div className="market">
-            <div className="market__main">
-                <Header type={true}/>
-                {
-                    tab === "UpperPage"
-                        ? <UpperPage setTab={setTab}/>
-                        : tab === "Demo"
-                        ? <Demo setTab={setTab}/>
-                        : ""
-                }
+            <div className="market">
+                <div className="market__main">
+                    <Header type={true}/>
+                    {
+                        tab === "UpperPage"
+                            ? <UpperPage setTab={setTab}/>
+                            : tab === "Demo"
+                            ? <Demo setTab={setTab}/>
+                            : ""
+                    }
+                </div>
+                <Dashboard/>
             </div>
-            <Dashboard/>
-        </div>
     );
 };
 
