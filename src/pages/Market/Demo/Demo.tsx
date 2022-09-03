@@ -39,8 +39,8 @@ const Demo = ({setTab}: any) => {
                 </span>
                 <div className="market__demo_choose">
                     <div onClick={()=>{
-                        setTab("Collector")
-                    }} className="market__demo_chooseBlock activeChoose">
+                        setType("Collector")
+                    }} className={type === "Collector" ? "market__demo_chooseBlock activeChoose" : "market__demo_chooseBlock"}>
                         <h2>Collector</h2>
                         <span>
                             Collectors can browse and buy
@@ -48,8 +48,8 @@ const Demo = ({setTab}: any) => {
                         </span>
                     </div>
                     <div onClick={()=>{
-                        setTab("Artist")
-                    }} className="market__demo_chooseBlock">
+                        setType("Artist")
+                    }} className={type === "Artist" ? "market__demo_chooseBlock activeChoose" : "market__demo_chooseBlock"}>
                         <h2>Artist</h2>
                         <span>
                             Artists can browse and buy
