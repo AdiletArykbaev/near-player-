@@ -1,7 +1,7 @@
 import React, {FC} from 'react';
 import './header.scss'
 import SearchBar from "../../../entities/ui/SearchBar";
-import {NavLink} from "react-router-dom";
+import {Link, NavLink} from "react-router-dom";
 import Button from "../../../entities/ui/Button";
 import Logo from "../../../entities/ui/Logo";
 
@@ -15,10 +15,12 @@ const Header: FC<HeaderProps> = ({type}) => {
             <div className="header__row">
                 <div className="header__info">
                     <div className="header__logo">
-                        <Logo width={24} height={24}/>
+                        <Link to={"/"}>
+                            <Logo svgColor={type ? "#F9F7F7" : "#06020D"} width={24} height={24}/>
+                        </Link>
                     </div>
-                    <SearchBar colorSvg={type ? "#FFFFFF" : "#06020D"}/>
-                    <div className="header__nav">
+                    <SearchBar type={type} colorSvg={type ? "#F9F7F7" : "#06020D"}/>
+                    <div className={`header__nav ${type ? "header__nav_light" : "header__nav_dark"}`}>
                         <NavLink to="/explore">Explore</NavLink>
                         <NavLink to="/collections">Collections</NavLink>
                     </div>

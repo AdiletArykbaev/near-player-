@@ -3,13 +3,15 @@ import './search.scss';
 
 interface SearchBarProps {
     colorSvg: string,
+    type: boolean,
 }
 
-const SearchBar: FC<SearchBarProps> = ({colorSvg}) => {
+const SearchBar: FC<SearchBarProps> = ({colorSvg, type}) => {
     const [input, setInput] = useState(false);
 
     return (
-        <form className={`search ${input ? "search-padding" : ''}`}>
+        <form style={{border: `1px solid ${type ? "rgba(252, 252, 252, 0.2)" : "rgba(6, 2, 13, 0.2)"}`}}
+              className={`search ${input ? "search-padding" : ''}`}>
             <label>
                 {
                     !input
@@ -24,7 +26,8 @@ const SearchBar: FC<SearchBarProps> = ({colorSvg}) => {
                         : ''
                 }
                 <input onBlur={() => setInput(false)} onFocus={() => setInput(true)}
-                       placeholder="Search track...." className={`search__input ${input ? "search__input_active" : ''}`}
+                       placeholder="Search track...."
+                       className={`search__input ${input ? "search__input_active" : ''} ${type ? "search__input_light" : "search__input_dark"}`}
                        type="text"/>
             </label>
         </form>

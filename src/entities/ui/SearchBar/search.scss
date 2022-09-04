@@ -1,6 +1,5 @@
 .search {
   position: relative;
-  border: 1px solid rgba(252, 252, 252, 0.2);
   border-radius: 6px;
   padding: 16px 16px 16px 46px;
   transition: 0.3s;
@@ -26,7 +25,6 @@
     font-size: 16px;
     line-height: 140%;
     width: 100%;
-    color: rgba(255, 255, 255, 0.6);
     outline: none;
 
     &::placeholder {
@@ -38,11 +36,26 @@
       font-size: 16px;
       line-height: 140%;
       width: 100%;
-      color: rgba(255, 255, 255, 0.6);
     }
 
     &_active {
       padding: 0 5px;
+    }
+
+    &_light {
+      color: rgba(255, 255, 255, 0.6);
+
+      &::placeholder {
+        color: rgba(255, 255, 255, 0.6);
+      }
+    }
+
+    &_dark {
+      color: rgba(6, 2, 13, 0.6);
+
+      &::placeholder {
+        color: rgba(6, 2, 13, 0.6);
+      }
     }
   }
 }

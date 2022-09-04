@@ -19,7 +19,7 @@ const CardEvent: FC<Props> = ({name, aviable, image}) => {
             </div>
             <div className="EventCard__padding">
                 <div className="EventCard__title">
-                    <Logo width={16} height={16}/>
+                    <Logo svgColor={"#06020D"} width={16} height={16}/>
                     <span>AVA BITHOLD</span>
                 </div>
                 {
