@@ -15,7 +15,6 @@ const Market = () => {
 
     useEffect(() => {
         setStateTop(elementRef.current.clientHeight);
-        console.log(window.scrollY);
     }, [elementRef]);
 
     return (
@@ -35,7 +34,7 @@ const Market = () => {
                 </div>
                 <Dashboard/>
             </div>
-            <div id="test" style={{top: stateTop}} className="MarketPlace">
+            <div style={{top: stateTop}} className="MarketPlace">
                 <MarketPlace/>
             </div>
         </>
