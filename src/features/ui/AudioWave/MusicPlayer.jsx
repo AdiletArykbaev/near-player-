@@ -1,10 +1,9 @@
-import React, { Component } from 'react';
+import React, {Component, useEffect} from 'react';
 import WaveSurfer from 'wavesurfer.js';
 
 class AudioWave extends Component {
     state = {
-        playing: false,
-        duration: 0
+        playing: this.props.playing,
     };
 
     componentDidMount() {
@@ -14,31 +13,29 @@ class AudioWave extends Component {
             cursorWidth: 1,
             container: '#waveform',
             backend: 'WebAudio',
-            height: 80,
+            height: 64,
             progressColor: '#E7B672',
             responsive: true,
             waveColor: 'rgba(6, 2, 13, 0.2)',
             cursorColor: 'transparent',
         });
         this.waveform.load(track);
-        track.onloadedmetadata = () => {
-            this.state.duration = track.duration
-        };
     };
 
-    handlePlay = () => {
-        this.setState({ playing: !this.state.playing });
-        this.waveform.playPause();
-    };
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        if (this.props.playing !== this.state.playing){
+            this.setState({ playing: this.props.playing });
+            this.waveform.playPause();
+        }
+        if (this.waveform.getCurrentTime()){
+           console.log(this.waveform.getCurrentTime())
+        }
+    }
 
     render() {
         return (
-            <div>
-                <button onClick={this.handlePlay} >
-                    {!this.state.playing ? 'Play' : 'Pause'}
-                </button>
-                <div id="waveform" />
-                <span>{this.state.duration}</span>
+            <div className="waveForm_parent">
+                <div id="waveform"/>
             </div>
         );
     }

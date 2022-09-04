@@ -1,3 +1,18 @@
 .NftDetails{
+  display: flex;
+  flex-direction: column;
+  padding: 0 40px;
+  .NftInfo{
+    margin-top: 24px;
+    display: flex;
+    width: 100%;
+    column-gap: 25px;
 
+    .Right{
+      width: calc(50% - 13px);
+      .waveForm_parent{
+        width: 100%;
+      }
+    }
+  }
 }

@@ -19,7 +19,7 @@ const Dashboard = () => {
                             <TwitterIcon/>
                             <DiscordIcon/>
                         </div>
-                        <a href="#test" className="dashboard__left_tips">
+                        <a href="#marketplace" className="dashboard__left_tips">
                             <MouseIcon/>
                             <ArrowIcon/>
                         </a>

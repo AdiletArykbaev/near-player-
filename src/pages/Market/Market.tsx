@@ -34,7 +34,7 @@ const Market = () => {
                 </div>
                 <Dashboard/>
             </div>
-            <div style={{top: stateTop}} className="MarketPlace">
+            <div id="marketplace" style={{top: stateTop}} className="MarketPlace">
                 <MarketPlace/>
             </div>
         </>
