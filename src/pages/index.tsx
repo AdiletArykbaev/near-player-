@@ -6,12 +6,10 @@ import Explore from "./Explore";
 const Routing = () => {
     return (
         <>
-            <div className="container">
-                <Routes>
-                    <Route path={"/"} element={<Market/>}/>
-                    <Route path={"/explore"} element={<Explore/>}/>
-                </Routes>
-            </div>
+            <Routes>
+                <Route path={"/"} element={<Market/>}/>
+                <Route path={"/explore"} element={<Explore/>}/>
+            </Routes>
         </>
     );
 };

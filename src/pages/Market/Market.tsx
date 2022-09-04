@@ -13,7 +13,7 @@ const Market = () => {
     const [stateTop, setStateTop] = useState(0);
     const elementRef: any = useRef();
 
-    useEffect(()=>{
+    useEffect(() => {
         setStateTop(elementRef.current.clientHeight);
         console.log(window.scrollY);
     }, [elementRef]);
@@ -23,13 +23,15 @@ const Market = () => {
             <div ref={elementRef} className="market">
                 <div className="market__main">
                     <Header type={true}/>
-                    {
-                        tab === "UpperPage"
-                            ? <UpperPage setTab={setTab}/>
-                            : tab === "Demo"
-                            ? <Demo setTab={setTab}/>
-                            : ""
-                    }
+                    <div className="market__container">
+                        {
+                            tab === "UpperPage"
+                                ? <UpperPage setTab={setTab}/>
+                                : tab === "Demo"
+                                ? <Demo setTab={setTab}/>
+                                : ""
+                        }
+                    </div>
                 </div>
                 <Dashboard/>
             </div>
