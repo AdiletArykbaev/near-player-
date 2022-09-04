@@ -1,26 +1,12 @@
 import React from 'react';
 import featuredCard from '../../img/featuredCard.png'
 import './featuresCard.scss'
+import Gallery from "../Gallery";
 
 const FeaturedCard = () => {
     return (
         <div className="featuredCard">
-            <div className="featuredCard__top">
-                <div className="featuredCard__promo">
-                    <img src={featuredCard} alt="featuredCard"/>
-                </div>
-                <div className="featuredCard__list">
-                    <div className="featuredCard__list_item">
-                        <img src={featuredCard} alt="featuredCard"/>
-                    </div>
-                    <div className="featuredCard__list_item">
-                        <img src={featuredCard} alt="featuredCard"/>
-                    </div>
-                    <div className="featuredCard__list_item">
-                        <img src={featuredCard} alt="featuredCard"/>
-                    </div>
-                </div>
-            </div>
+            <Gallery/>
             <h3 className="featuredCard__title">Ensch-maschine</h3>
             <h4 className="featuredCard__subtitle">
                 <span>

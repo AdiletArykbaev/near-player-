@@ -22,7 +22,7 @@ const Header: FC<HeaderProps> = ({type}) => {
                     <SearchBar placeholder={"Search track...."} type={type ? 1 : 2} colorSvg={type ? "#F9F7F7" : "#06020D"}/>
                     <div className={`header__nav ${type ? "header__nav_light" : "header__nav_dark"}`}>
                         <NavLink to="/explore">Explore</NavLink>
-                        <NavLink to="/collections">Collections</NavLink>
+                        <NavLink to="/collections/1">Collections</NavLink>
                     </div>
                 </div>
                 <div className="header__actions">

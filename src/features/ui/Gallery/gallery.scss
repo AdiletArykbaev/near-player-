@@ -1,0 +1,33 @@
+.gallery {
+  display: flex;
+  justify-content: space-between;
+
+  &__promo {
+    width: 75%;
+  }
+
+  &__img_box {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10.6687px;
+
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      max-width: 150%;
+      max-height: 150%;
+      min-width: 100%;
+      min-height: 100%;
+    }
+
+  }
+
+  &__list {
+    width: 22%;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+  }
+}
