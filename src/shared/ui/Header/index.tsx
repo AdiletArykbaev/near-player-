@@ -19,7 +19,7 @@ const Header: FC<HeaderProps> = ({type}) => {
                             <Logo svgColor={type ? "#F9F7F7" : "#06020D"} width={24} height={24}/>
                         </Link>
                     </div>
-                    <SearchBar type={type} colorSvg={type ? "#F9F7F7" : "#06020D"}/>
+                    <SearchBar placeholder={"Search track...."} type={type ? 1 : 2} colorSvg={type ? "#F9F7F7" : "#06020D"}/>
                     <div className={`header__nav ${type ? "header__nav_light" : "header__nav_dark"}`}>
                         <NavLink to="/explore">Explore</NavLink>
                         <NavLink to="/collections">Collections</NavLink>
