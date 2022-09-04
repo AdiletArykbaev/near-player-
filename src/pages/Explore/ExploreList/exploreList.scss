@@ -1,0 +1,32 @@
+.explore__list {
+  padding: 0 24px;
+
+  &_tools {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 16px;
+  }
+
+  &_count {
+    font-family: 'Rubik', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    display: flex;
+    align-items: center;
+    color: rgba(6, 2, 13, 0.6);
+  }
+
+  &_row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+
+  &_item {
+    width: calc(100% / 6 - 24px * 5 / 6);
+  }
+}

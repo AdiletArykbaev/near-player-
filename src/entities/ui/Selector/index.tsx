@@ -7,13 +7,15 @@ interface SelectorProps {
 
 const Selector: FC<SelectorProps> = ({data}) => {
     return (
-        <select className="selector">
-            {
-                data && data.map((el: any) => (
-                    <option key={el}>{el}H</option>
-                ))
-            }
-        </select>
+        <div className="selector">
+            <select className="selector__select">
+                {
+                    data && data.map((el: any) => (
+                        <option key={el}>{el}</option>
+                    ))
+                }
+            </select>
+        </div>
     );
 };
 

@@ -1,17 +1,18 @@
 .search {
   position: relative;
   border-radius: 6px;
-  padding: 16px 16px 16px 46px;
+  padding: 7px 16px 7px 46px;
   transition: 0.3s;
+  width: 100%;
 
   &-padding {
-    padding: 16px !important;
+    padding: 7px 16px !important;
     transition: 0.3s;
   }
 
   &__img {
     position: absolute;
-    left: 10%;
+    left: 18px;
     top: 50%;
     transform: translate(0, -50%);
   }
@@ -55,6 +56,14 @@
 
       &::placeholder {
         color: rgba(6, 2, 13, 0.6);
+      }
+    }
+
+    &_black {
+      color: #06020D;
+
+      &::placeholder {
+        color: #06020D;
       }
     }
   }

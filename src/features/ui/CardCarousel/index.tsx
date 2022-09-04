@@ -46,9 +46,9 @@ const SwiperBtn: FC<CardCarouselProps> = ({text, type}) => {
                             </button>
                         </>
                         : type === 2
-                        ? <Selector data={[1, 2, 3, 4, 5]}/>
+                        ? <Selector data={["1H", "2H", "3H", "4H", "5H"]}/>
                         : <>
-                            <Selector data={[1, 2, 3, 4, 5]}/>
+                            <Selector data={["1H", "2H", "3H", "4H", "5H"]}/>
                             <Switch text={"Available"}/>
                             <button onClick={() => swiper.slidePrev()}>
                                 <svg width="20" height="21" viewBox="0 0 20 21" fill="none"

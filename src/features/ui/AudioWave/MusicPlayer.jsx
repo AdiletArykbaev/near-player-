@@ -4,7 +4,9 @@ import WaveSurfer from 'wavesurfer.js';
 class AudioWave extends Component {
     state = {
         playing: false,
+        duration: 0
     };
+
     componentDidMount() {
         const track = document.querySelector('#track');
         this.waveform = WaveSurfer.create({
@@ -19,6 +21,9 @@ class AudioWave extends Component {
             cursorColor: 'transparent',
         });
         this.waveform.load(track);
+        track.onloadedmetadata = () => {
+            this.state.duration = track.duration
+        };
     };
 
     handlePlay = () => {
@@ -33,7 +38,7 @@ class AudioWave extends Component {
                     {!this.state.playing ? 'Play' : 'Pause'}
                 </button>
                 <div id="waveform" />
-
+                <span>{this.state.duration}</span>
             </div>
         );
     }
