@@ -15,19 +15,9 @@ const NftDetails: FC<Props> = ({url}) => {
     const [playing, setPlaying] = useState(false);
     const audioRef: any = useRef(null);
 
-    const [seconds, setSeconds] = useState(0);
-
-    useEffect(() => {
-        let i;
-        if (playing) {
-            const i = setInterval(() => {
-                setSeconds((prev) => prev + 1)
-            }, 1000)
-        } else {
-            clearInterval(i)
-        }
-    }, [seconds]);
-    console.log(seconds)
+    useEffect(()=>{
+        console.log(audioRef.current.currentTime)
+    }, [audioRef.current]);
 
     return (
         <div className="NftDetails">
@@ -36,13 +26,13 @@ const NftDetails: FC<Props> = ({url}) => {
             <div className="NftInfo">
                 <AudioPreview setPlaying={setPlaying} playing={playing}/>
                 <div className="Right">
-                    <AudioWave ref={audioRef} setPlay={setPlaying} playing={playing}/>
+                    <AudioWave  setPlay={setPlaying} playing={playing}/>
                 </div>
             </div>
 
             <AudioPlayer/>
 
-            <audio id="track" src={url}/>
+            <audio ref={audioRef} id="track" src={url}/>
 
         </div>
     );

@@ -18,6 +18,9 @@ class AudioWave extends Component {
             responsive: true,
             waveColor: 'rgba(6, 2, 13, 0.2)',
             cursorColor: 'transparent',
+            mediaControls: true,
+            pixelRatio: 1
+
         });
         this.waveform.load(track);
     };
@@ -27,9 +30,7 @@ class AudioWave extends Component {
             this.setState({ playing: this.props.playing });
             this.waveform.playPause();
         }
-        if (this.waveform.getCurrentTime()){
-           console.log(this.waveform.getCurrentTime())
-        }
+
     }
 
     render() {
