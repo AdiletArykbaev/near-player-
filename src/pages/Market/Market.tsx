@@ -15,7 +15,6 @@ const Market = () => {
 
     useEffect(()=>{
         setStateTop(elementRef.current.clientHeight);
-        console.log(window.scrollY);
     }, [elementRef]);
 
     return (

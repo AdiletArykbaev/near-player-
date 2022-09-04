@@ -28,6 +28,8 @@
     "react-scripts": "5.0.1",
     "swiper": "^8.3.2",
     "typescript": "^4.7.4",
+    "wavesurfer-react": "^2.2.2",
+    "wavesurfer.js": "^6.2.0",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -55,6 +57,7 @@
     ]
   },
   "devDependencies": {
-    "@types/compose-function": "^0.0.30"
+    "@types/compose-function": "^0.0.30",
+    "@types/wavesurfer.js": "^6.0.3"
   }
 }
