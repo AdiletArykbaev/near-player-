@@ -1,0 +1,97 @@
+.Counter {
+  width: 100%;
+  background: #FFFFFF;
+  padding: 16px;
+  display: flex;
+  margin-top: 23px;
+  flex-direction: column;
+  border: 1px solid rgba(6, 2, 13, 0.2);
+  border-radius: 6px;
+
+  &__count {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &_left {
+      display: flex;
+      flex-direction: column;
+      row-gap: 10px;
+
+      span {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 14px;
+        display: flex;
+        align-items: center;
+        text-align: justify;
+        text-transform: uppercase;
+        color: rgba(6, 2, 13, 0.6);
+      }
+
+      h2 {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 24px;
+        display: flex;
+        align-items: center;
+        text-align: justify;
+        color: #06020D;
+      }
+    }
+
+    &_right {
+      column-gap: 16px;
+      display: flex;
+
+      span {
+        font-weight: 500;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        color: #06020D;
+      }
+
+      .button {
+        justify-content: center;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 120%;
+        display: flex;
+        align-items: center;
+        width: 40px;
+        color: rgba(0, 0, 0, 0.2);
+        height: 40px;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        border-radius: 6px;
+        transition: 0.3s;
+      }
+      .active {
+        color: #06020D;
+        transition: 0.3s;
+        border: 1px solid #000000;
+        border-radius: 6px;
+      }
+
+    }
+
+  }
+  .ConnectWallet{
+    margin-top: 16px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 120%;
+    color: #F9F7F7;
+    background: #06020D;
+    border-radius: 6px;
+    width: 100%;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

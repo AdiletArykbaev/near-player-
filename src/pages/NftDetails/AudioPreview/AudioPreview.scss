@@ -1,11 +1,15 @@
 .Audio {
   width: calc(50% - 13px);
   display: flex;
+  height: 100%;
   align-items: center;
   justify-content: center;
-  position: relative;
+  position: sticky;
+  top: 0;
+  left: 0;
   border-radius: 10px;
   overflow: hidden;
+
 
   .blur {
     background: rgba(6, 2, 13, 0.32);

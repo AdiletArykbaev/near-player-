@@ -1,0 +1,76 @@
+.NftDes {
+  display: flex;
+  flex-direction: column;
+
+  &__ui {
+    display: flex;
+    align-items: center;
+  }
+  .subtitle{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+    text-align: justify;
+    color: rgba(6, 2, 13, 0.6);
+    margin-top: 23px;
+    margin-bottom: 23px;
+  }
+
+  &__profile {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    .left{
+      display: flex;
+      column-gap: 10px;
+      align-items: center;
+    }
+    .img {
+      width: 48px;
+      height: 48px;
+      border: 1px solid rgba(249, 247, 247, 0.2);
+      border-radius: 6px;
+    }
+    .right{
+      display: flex;
+      align-items: center;
+      column-gap: 16px;
+    }
+
+    &_titles {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      h2{
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 120%;
+        display: flex;
+        align-items: center;
+        color: #06020D;
+      }
+      span{
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        display: flex;
+        align-items: center;
+        color: #06020D;
+
+      }
+      div{
+        margin-top: 6px;
+        column-gap: 7px;
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+}

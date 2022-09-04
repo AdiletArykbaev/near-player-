@@ -1,0 +1,26 @@
+.switchCase{
+  background: rgba(6, 2, 13, 0.05);
+  border-radius: 6px;
+  display: flex;
+  align-self: flex-start;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 120%;
+  align-items: center;
+  color: rgba(6, 2, 13, 0.6);
+  margin-top: 26px;
+  .switchCaser{
+    padding: 10px 16px;
+    transition: 0.3s;
+    cursor: pointer;
+    border: 1px solid transparent;
+  }
+  .active{
+    border: 1px solid rgba(6, 2, 13, 0.2);
+    border-radius: 6px;
+    transition: 0.3s;
+    color: #06020D;
+    background: #F9F7F7;
+  }
+}
