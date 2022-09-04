@@ -76,7 +76,7 @@ const SwiperBtn: FC<CardCarouselProps> = ({text, type}) => {
 const CardCarousel: FC<CardCarouselProps> = ({
                                                  text, data,
                                                  slidesCount, type,
-                                                 rowCount = 1
+                                                 rowCount
                                              }) => {
     return (
         <div className="cardCarousel">
@@ -86,8 +86,8 @@ const CardCarousel: FC<CardCarouselProps> = ({
                     slidesPerView={slidesCount}
                     spaceBetween={24}
                     grid={{rows: rowCount}}>
-                {data && data.map((el: any) => (
-                    <SwiperSlide>
+                {data && data.map((el: any, idx: number) => (
+                    <SwiperSlide key={idx}>
                         {
                             type === 1
                                 ? <UpcomingCard/>

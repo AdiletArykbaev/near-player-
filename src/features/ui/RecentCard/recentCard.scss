@@ -4,6 +4,7 @@
   transition: 0.3s;
   position: relative;
   bottom: 0;
+  align-self: center;
 
   &:hover {
     bottom: 10px;
@@ -47,7 +48,6 @@
 
   &__staking {
     transition: 0.3s;
-    font-family: 'Rubik', sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 14px;
@@ -75,7 +75,6 @@
   }
 
   &__title {
-    font-family: 'Rubik', sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 14px;
@@ -85,7 +84,6 @@
   }
 
   &__subtitle {
-    font-family: 'Rubik', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
@@ -104,7 +102,6 @@
   }
 
   &__score {
-    font-family: 'Rubik', sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 14px;
@@ -116,7 +113,6 @@
   }
 
   &__btn {
-    font-family: 'Rubik', sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 14px;
