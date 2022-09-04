@@ -1,20 +1,20 @@
 import React from 'react';
-import './explore.scss';
+import './collections.scss';
 import Header from "../../shared/ui/Header";
 import ListTools from "../../features/ui/ListTools";
 import CardList from "../../features/ui/CardList";
-import RecentCard from "../../features/ui/RecentCard";
+import FeaturedCard from "../../features/ui/FeaturedCard";
 
-const Explore = () => {
+const Collections = () => {
     return (
-        <div className="explore">
+        <div className="collections">
             <Header type={false}/>
             <ListTools/>
             <CardList>
                 {
                     Array.from(Array(12).keys()).map((el: number) => (
                         <div className="card__list_item">
-                            <RecentCard id={el}/>
+                            <FeaturedCard id={el}/>
                         </div>
                     ))
                 }
@@ -23,4 +23,4 @@ const Explore = () => {
     );
 };
 
-export default Explore;
+export default Collections;

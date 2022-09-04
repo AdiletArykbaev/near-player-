@@ -1,11 +1,16 @@
-import React from 'react';
-import featuredCard from '../../img/featuredCard.png'
+import React, {FC} from 'react';
 import './featuresCard.scss'
 import Gallery from "../Gallery";
+import {useNavigate} from "react-router-dom";
 
-const FeaturedCard = () => {
+interface FeaturedCardProps {
+    id: number
+}
+
+const FeaturedCard: FC<FeaturedCardProps> = ({id}) => {
+    const navigate = useNavigate();
     return (
-        <div className="featuredCard">
+        <div onClick={() => navigate(`/collections/${id}`)} className="featuredCard">
             <Gallery/>
             <h3 className="featuredCard__title">Ensch-maschine</h3>
             <h4 className="featuredCard__subtitle">

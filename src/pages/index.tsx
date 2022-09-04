@@ -4,6 +4,7 @@ import Market from "./Market/Market";
 import Explore from "./Explore";
 import NftDetails from "./NftDetails/NftDetails";
 import CollectionsDetails from "./CollectionsDetails";
+import Collections from "./Collections";
 
 const Routing = () => {
 
@@ -21,7 +22,8 @@ const Routing = () => {
             <Routes>
                 <Route path={"/"} element={<Market/>}/>
                 <Route path={"/explore"} element={<Explore/>}/>
-                <Route path={"/explore/NFT/:id"}
+                <Route path={"/collections"} element={<Collections/>}/>
+                <Route path={"/explore/:id"}
                        element={<NftDetails url="https://dl2.mp3party.net/online/6829986.mp3"/>}/>
                 <Route path={"/collections/:id"} element={<CollectionsDetails/>}/>
             </Routes>

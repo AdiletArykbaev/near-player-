@@ -38,7 +38,7 @@ const CollectionList = () => {
                 {
                     Array.from(Array(12).keys()).map((el: number) => (
                         <div className="collectionList__item">
-                            <RecentCard/>
+                            <RecentCard id={el}/>
                         </div>
                     ))
                 }

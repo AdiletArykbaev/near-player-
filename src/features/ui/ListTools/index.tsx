@@ -1,13 +1,12 @@
 import React from 'react';
-import './exploreTools.scss';
+import './listTools.scss';
 import Button from "../../../entities/ui/Button";
 import ExploreGenres from "../../../features/ui/ExploreGenres";
 import SearchBar from "../../../entities/ui/SearchBar";
 import Selector from "../../../entities/ui/Selector";
 import Switch from "../../../entities/ui/Switch";
 
-const ExploreTools = () => {
-
+const ListTools = () => {
     return (
         <section className="explore__tools">
             <ExploreGenres/>
@@ -34,4 +33,4 @@ const ExploreTools = () => {
     );
 };
 
-export default ExploreTools;
+export default ListTools;

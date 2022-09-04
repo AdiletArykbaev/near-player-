@@ -1,10 +1,16 @@
-import React from 'react';
+import React, {FC} from 'react';
 import cardImg from '../../img/upcomingCard.png';
 import './upcomingCard.scss';
+import {useNavigate} from "react-router-dom";
 
-const UpcomingCard = () => {
+interface UpcomingCard {
+    id: number
+}
+
+const UpcomingCard: FC<UpcomingCard> = ({id}) => {
+    const navigate = useNavigate();
     return (
-        <div className="card">
+        <div onClick={() => navigate(`${id}`)} className="card">
             <div className="card__top">
                 <div className="card__img">
                     <img src={cardImg} alt="upcomingCard"/>

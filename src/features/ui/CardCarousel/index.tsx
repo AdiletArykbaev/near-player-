@@ -86,14 +86,14 @@ const CardCarousel: FC<CardCarouselProps> = ({
                     slidesPerView={slidesCount}
                     spaceBetween={24}
                     grid={{rows: rowCount}}>
-                {data && data.map((el: any, idx: number) => (
+                {data && data.map((el: number, idx: number) => (
                     <SwiperSlide key={idx}>
                         {
                             type === 1
-                                ? <UpcomingCard/>
+                                ? <UpcomingCard id={el}/>
                                 : type === 2
-                                ? <FeaturedCard/>
-                                : <RecentCard/>
+                                ? <FeaturedCard id={el}/>
+                                : <RecentCard id={el}/>
                         }
                     </SwiperSlide>
                 ))}
