@@ -1,0 +1,44 @@
+.cardCarousel {
+  margin: 40px 0 0;
+  padding: 24px 0 0;
+  border-top: 1px solid rgba(6, 2, 13, 0.2);
+
+  .swiper {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .swiper-wrapper{
+    flex-direction: row !important;
+    .swiper-slide{
+      margin-top: 10px!important;
+    }
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 30px;
+  }
+
+  &__title {
+    font-family: 'Rubik', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 120%;
+    color: #06020D;
+  }
+
+  &__btnBox {
+    display: flex;
+    align-items: center;
+    column-gap: 16px;
+
+    button {
+      border: 1px solid #000000;
+      border-radius: 6px;
+      padding: 9px;
+    }
+  }
+}

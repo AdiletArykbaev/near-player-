@@ -1,0 +1,64 @@
+.collectionsInfo {
+  width: 30.7%;
+
+  &__title {
+    font-family: 'Rubik', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 120%;
+    color: #06020D;
+    margin: 24px 0 6px;
+  }
+
+  &__subtitle {
+    font-family: 'Rubik', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+    color: #06020D;
+  }
+
+  &__social {
+    margin: 16px 0 24px;
+    display: flex;
+    align-items: center;
+    column-gap: 16px;
+
+    button {
+      padding: 9px 25px;
+    }
+  }
+
+  &__description {
+    font-family: 'Rubik', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: justify;
+    color: rgba(6, 2, 13, 0.6);
+    margin: 0 0 24px;
+  }
+
+  &__stats {
+    display: flex;
+    column-gap: 16px;
+    align-items: center;
+
+    button {
+      flex-direction: column-reverse;
+      row-gap: 5px;
+      padding: 10px 25px;
+
+      p {
+        display: flex;
+        align-items: center;
+        column-gap: 6px;
+      }
+    }
+  }
+}

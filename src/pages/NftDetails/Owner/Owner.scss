@@ -1,0 +1,33 @@
+.Owner{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  border: 1px solid rgba(6, 2, 13, 0.2);
+  border-radius: 6px;
+  padding: 16px;
+  margin-top: 23px;
+  &__left{
+    row-gap: 17px;
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+  }
+  &__right{
+    row-gap: 17px;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+  }
+  span{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 120%;
+    display: flex;
+    align-items: center;
+    text-align: justify;
+    color: #06020D;
+    column-gap: 16px;
+  }
+
+}

@@ -1,0 +1,79 @@
+.AudioPlayer {
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  background: #06020D;
+  height: 96px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  .audioVolume{
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+  }
+  .audioUi{
+    flex: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    &__buttons{
+      margin-bottom: 23px;
+      display: flex;
+      align-items: center;
+      column-gap: 16px;
+    }
+  }
+  .info{
+    display: flex;
+    align-items: center;
+    img{
+      border: 1px solid rgba(249, 247, 247, 0.2);
+      border-radius: 2px;
+      width: 44px;
+      height: 44px;
+    }
+    &__description{
+      margin-left: 16px;
+      &_year{
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 19px;
+        display: flex;
+        align-items: center;
+        color: #F9F7F7;
+      }
+    }
+  }
+}
+
+.up{
+  left: 0;
+  bottom: 0;
+  animation: audioPlayerUp ease 0.5s;
+}
+
+.down {
+  left: 0;
+  bottom: -100%;
+  animation: audioPlayerDown ease 2s;
+}
+
+@keyframes audioPlayerDown {
+  0% {
+    bottom: 0;
+  }
+  100% {
+    bottom: -100%;
+  }
+}
+
+@keyframes audioPlayerUp {
+  0% {
+    bottom: -100%;
+  }
+  100% {
+    bottom: 0;
+  }
+}

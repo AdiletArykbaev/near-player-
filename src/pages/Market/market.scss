@@ -1,0 +1,20 @@
+.market {
+  color: #FFFFFF;
+  position: fixed;
+  padding: 16px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  overflow-y: scroll;
+  max-height: 100vh;
+
+  &__main {
+    background: url("./imgs/background.png") center/cover no-repeat;
+    border-radius: 9px;
+  }
+
+  &__container {
+    padding: 16px 24px;
+  }
+}

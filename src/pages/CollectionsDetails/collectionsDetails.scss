@@ -1,0 +1,14 @@
+.collectionsDetails {
+  padding: 16px;
+
+  &__container {
+    padding: 24px;
+  }
+
+  &__row {
+    margin: 40px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}

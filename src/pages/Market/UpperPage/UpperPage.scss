@@ -1,0 +1,85 @@
+.market__upperPage {
+  padding: 44px 0 34px 92px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  animation: startAnim 1s ease;
+  &_info {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .yellow {
+    color: #E7B672;
+    margin-right: 6px;
+  }
+
+  &_version {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 120%;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.5px;
+    text-transform: uppercase;
+  }
+
+  &_title {
+    font-family: 'Baron Neue', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 140%;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+  }
+
+  &_subtitle {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    display: flex;
+    align-items: center;
+    color: rgba(229, 222, 221, 0.6);
+  }
+
+  &_buttons {
+    margin-top: 40px;
+    display: flex;
+    column-gap: 20px;
+
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 183px;
+      height: 40px;
+    }
+
+    .button1 {
+      background: #FFFFFF;
+      border: 1px solid #F9F7F7;
+      border-radius: 6px;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 120%;
+      color: #06020D;
+
+      svg {
+        margin-left: 15px;
+      }
+    }
+
+    .button2 {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(252, 252, 252, 0.2);
+      border-radius: 6px;
+    }
+  }
+}
