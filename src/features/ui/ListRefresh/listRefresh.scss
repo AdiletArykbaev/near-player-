@@ -1,0 +1,16 @@
+.refreshList {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__count {
+    font-family: 'Rubik', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    display: flex;
+    align-items: center;
+    color: rgba(6, 2, 13, 0.6);
+  }
+}

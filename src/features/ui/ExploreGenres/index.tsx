@@ -27,22 +27,11 @@ const ExploreGenres = () => {
                 setSliderLeftValue(val);
                 sliderBox.current.style.left = `${val}px`;
             }
+        } else if (diff === sliderLeftValue) {
+            setSliderLeftValue(0);
+            sliderBox.current.style.left = 0
         }
     };
-
-    // const slidePrevHandler = () => {
-    //     if (diff <= sliderLeftValue) {
-    //         if (0 > sliderLeftValue + 100) {
-    //             const val = sliderLeftValue + 100;
-    //             setSliderLeftValue(val);
-    //             sliderBox.current.style.left = `${val}px`;
-    //         } else {
-    //             const val = sliderLeftValue - (0 - sliderLeftValue);
-    //             setSliderLeftValue(val);
-    //             sliderBox.current.style.left = `${val}px`;
-    //         }
-    //     }
-    // };
 
     return (
         <>
@@ -66,24 +55,18 @@ const ExploreGenres = () => {
             <Button onClick={slideNextHandler} color={"#06020D"}
                     background={"transparent"}
                     border={"1px solid #06020D"}>
-                {/*{diff === sliderLeftValue*/}
-                {/*    ? <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">*/}
-                {/*        <path*/}
-                {/*            d="M11.0775 15.2558L6.32169 10.5L11.0775 5.74414L12.2559 6.92247L8.67836 10.5L12.2559 14.0775L11.0775 15.2558Z"*/}
-                {/*            fill="#06020D" fillOpacity="0.6"/>*/}
-                {/*    </svg>*/}
-                {/*    : <svg width="20" height="21" viewBox="0 0 20 21" fill="none"*/}
-                {/*           xmlns="http://www.w3.org/2000/svg">*/}
-                {/*        <path*/}
-                {/*            d="M8.92247 15.2558L13.6783 10.5L8.92247 5.74414L7.74414 6.92247L11.3216 10.5L7.74414 14.0775L8.92247 15.2558Z"*/}
-                {/*            fill="#06020D"/>*/}
-                {/*    </svg>}*/}
-                <svg width="20" height="21" viewBox="0 0 20 21" fill="none"
-                     xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M8.92247 15.2558L13.6783 10.5L8.92247 5.74414L7.74414 6.92247L11.3216 10.5L7.74414 14.0775L8.92247 15.2558Z"
-                        fill="#06020D"/>
-                </svg>
+                {diff === sliderLeftValue
+                    ? <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M11.0775 15.2558L6.32169 10.5L11.0775 5.74414L12.2559 6.92247L8.67836 10.5L12.2559 14.0775L11.0775 15.2558Z"
+                            fill="#06020D" fillOpacity="0.6"/>
+                    </svg>
+                    : <svg width="20" height="21" viewBox="0 0 20 21" fill="none"
+                           xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M8.92247 15.2558L13.6783 10.5L8.92247 5.74414L7.74414 6.92247L11.3216 10.5L7.74414 14.0775L8.92247 15.2558Z"
+                            fill="#06020D"/>
+                    </svg>}
             </Button>
         </>
     );
