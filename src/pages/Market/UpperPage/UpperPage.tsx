@@ -6,20 +6,21 @@ const UpperPage = ({setTab}: any) => {
     return (
         <div className="market__upperPage">
             <div className="market__upperPage_info">
-                            <span className="market__upperPage_version">
-                            <span className="yellow">ALPHA</span> v.0.1
-                        </span>
+                <span className="market__upperPage_version">
+                    <span className="yellow">ALPHA</span> v.0.1
+                </span>
                 <div className="market__upperPage_title">
-                            <span>
-                                Return to the world where <span className="yellow">yoU</span>
-                            control the music
-                            </span>
+                    <span>
+                        Return to the world where
+                        <span className="yellow">yoU</span>
+                        control the music
+                    </span>
                 </div>
                 <span className="market__upperPage_subtitle">Our creator toolkit makes it easy to create an NFT collection,
                             with tooling that scales with your creative ambitions.</span>
             </div>
             <div className="market__upperPage_buttons">
-                <button className="button1" onClick={()=> setTab("Demo")}>Try Demo
+                <button className="button1" onClick={() => setTab("Demo")}>Try Demo
                     <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
                          xmlns="http://www.w3.org/2000/svg">
                         <path
