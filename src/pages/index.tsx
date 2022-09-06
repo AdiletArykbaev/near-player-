@@ -5,6 +5,8 @@ import Explore from "./Explore";
 import NftDetails from "./NftDetails/NftDetails";
 import CollectionsDetails from "./CollectionsDetails";
 import Collections from "./Collections";
+// @ts-ignore
+import SongSing from "./The_Neighbourhood_-_Sweater_Weather_47959107.mp3"
 
 const Routing = () => {
 
@@ -24,7 +26,7 @@ const Routing = () => {
                 <Route path={"/explore"} element={<Explore/>}/>
                 <Route path={"/collections"} element={<Collections/>}/>
                 <Route path={"/explore/:id"}
-                       element={<NftDetails url="https://dl2.mp3party.net/online/6829986.mp3"/>}/>
+                       element={<NftDetails url={SongSing}/>}/>
                 <Route path={"/collections/:id"} element={<CollectionsDetails/>}/>
             </Routes>
         </>
