@@ -1,45 +1,53 @@
-import React, {Component, useEffect} from 'react';
-import WaveSurfer from 'wavesurfer.js';
+import Wavesurfer from "wavesurfer.js";
+import {useEffect, useRef} from "react";
 
-class AudioWave extends Component {
-    state = {
-        playing: this.props.playing,
-    };
+const Waveform = ({url, playing, setPlaying}) => {
 
-    componentDidMount() {
-        const track = document.querySelector('#track');
-        this.waveform = WaveSurfer.create({
-            barWidth: 3,
-            cursorWidth: 1,
-            container: '#waveform',
-            backend: 'WebAudio',
-            height: 64,
-            progressColor: '#E7B672',
-            responsive: true,
-            waveColor: 'rgba(6, 2, 13, 0.2)',
-            cursorColor: 'transparent',
-            mediaControls: true,
-            pixelRatio: 1
+    const waveform = useRef(null);
 
-        });
-        this.waveform.load(track);
-    };
-
-    componentDidUpdate(prevProps, prevState, snapshot) {
-        if (this.props.playing !== this.state.playing){
-            this.setState({ playing: this.props.playing });
-            this.waveform.playPause();
+    useEffect(() => {
+        if (!waveform.current) {
+            waveform.current = Wavesurfer.create({
+                barWidth: 3,
+                cursorWidth: 1,
+                container: '#waveform',
+                backend: 'WebAudio',
+                height: 64,
+                progressColor: '#E7B672',
+                responsive: true,
+                waveColor: 'rgba(6, 2, 13, 0.2)',
+                cursorColor: 'transparent',
+                mediaControls: true,
+                pixelRatio: 1
+            });
+            waveform.current.load(url);
         }
+    }, []);
 
-    }
+    const playAudio = () => {
+        if (!playing) {
+            waveform.current.pause();
 
-    render() {
-        return (
-            <div className="waveForm_parent">
-                <div id="waveform"/>
-            </div>
-        );
-    }
-}
+        } else {
+            waveform.current.play();
+        }
+    };
 
-export default AudioWave;
+    useEffect(() => {
+        if (waveform.current){
+            playAudio()
+        }
+    }, [playing]);
+
+    useEffect(()=>{
+        console.log(waveform.current.isPlaying())
+    }, [waveform.current]);
+
+    return (
+        <div style={{width: "100%"}}>
+            <div id="waveform"/>
+        </div>
+    );
+};
+
+export default Waveform;

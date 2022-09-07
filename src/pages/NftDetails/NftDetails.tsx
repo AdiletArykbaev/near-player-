@@ -35,7 +35,7 @@ const NftDetails: FC<Props> = ({url}) => {
                 <AudioPreview setPlaying={setPlaying} playing={playing}/>
                 <div className="Right">
                     <NftDes/>
-                    <AudioWave ref={audioRef} setPlay={setPlaying} playing={playing}/>
+                    <AudioWave url={url} setPlaying={setPlaying} playing={playing}/>
                     <SwitchCaser switcher={switcher} setSwitcher={setSwitcher}/>
                     <Counter count={count} setCount={setCounter}/>
                     <Owner/>
